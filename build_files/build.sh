@@ -12,8 +12,7 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 -y install \ 
     tmux \
-    @cosmic-desktop-environment \
-    --skip-unavailable
+    cosmic-desktop-environment
 
 # Use a COPR Example:
 #
