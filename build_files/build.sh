@@ -15,10 +15,10 @@ dnf5 -y install @cosmic-desktop-environment \
 
 # Use a COPR Example:
 #
-# dnf5 -y copr enable ublue-os/staging
+dnf5 -y copr enable sentry/kernel-blu
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
+dnf5 -y copr disable sentry/kernel-blu
 
 #### Example for enabling a System Unit File
 
