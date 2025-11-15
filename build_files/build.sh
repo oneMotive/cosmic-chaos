@@ -15,8 +15,11 @@ dnf5 -y install @cosmic-desktop-environment \
 
 # Use a COPR Example:
 #
-dnf5 -y copr enable sentry/kernel-blu
-dnf update --refresh -y
+wget https://copr.fedorainfracloud.org/coprs/sentry/kernel-blu/repo/fedora-43/sentry-kernel-blu-fedora-43.repo -O /etc/yum.repos.d/kernel-fsync.repo
+
+rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedorainfracloud.org:sentry:kernel-blu' kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
+#dnf5 -y copr enable sentry/kernel-blu
+#dnf update --refresh -y
 # dnf5 -y install sentry/kernel-blu
 # Disable COPRs so they don't end up enabled on the final image:
 dnf5 -y copr disable sentry/kernel-blu
