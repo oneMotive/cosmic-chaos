@@ -16,7 +16,8 @@ dnf5 -y install @cosmic-desktop-environment \
 # Use a COPR Example:
 #
 dnf5 -y copr enable sentry/kernel-blu
-dnf5 -y install sentry/kernel-blu
+dnf update --refresh
+# dnf5 -y install sentry/kernel-blu
 # Disable COPRs so they don't end up enabled on the final image:
 dnf5 -y copr disable sentry/kernel-blu
 
