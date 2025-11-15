@@ -15,7 +15,7 @@ dnf5 -y install @cosmic-desktop-environment \
 
 # Use a COPR Example:
 #
-wget https://copr.fedorainfracloud.org/coprs/sentry/kernel-blu/repo/fedora-rawhide/sentry-kernel-blu-fedora-rawhide.repo -O /etc/yum.repos.d/kernel-blu.repo
+wget https://copr.fedorainfracloud.org/coprs/sentry/kernel-blu/repo/fedora-42/sentry-kernel-blu-fedora-42.repo -O /etc/yum.repos.d/kernel-blu.repo
 
 rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedorainfracloud.org:sentry:kernel-blu' kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 #dnf5 -y copr enable sentry/kernel-blu
